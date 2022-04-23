@@ -2,13 +2,11 @@
   "name": "",
   "version": "0.0.1",
   "author": "",
-
   "repository": {
     "type": "git",
     "url": ""
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -17,9 +15,10 @@
     "express": "3.x",
     "express3-handlebars": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "python-shell": "^3.0.1"
   },
   "engines": {
     "node": "8.9.x"
-  }  
+  }
 }
