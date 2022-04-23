@@ -11,9 +11,9 @@ exports.view = function(req, res){
       throw err;
     // Results is an array consisting of messages collected during execution
     console.log('results: %j', results);
+    res.render('index', {randomNumber: 10, tryingthis:results});
   });
   
-  res.render('index');
 };
 
 exports.viewAboutMe = function(req, res) {
