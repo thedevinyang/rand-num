@@ -11,6 +11,10 @@ exports.view = function(req, res){
       throw err;
     // Results is an array consisting of messages collected during execution
     console.log('results: %j', results);
+<<<<<<< Updated upstream
+=======
+    res.render('index', {randomNumber:results});
+>>>>>>> Stashed changes
   });
   
   res.render('index');

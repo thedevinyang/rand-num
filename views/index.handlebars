@@ -1,8 +1,39 @@
 <html>
 <head>
 	<title>Test Page</title>
+	<style>
+	body {font-family: Verdana, sans-serif;}
+	</style>
 </head>
+
+
 <body>
+<<<<<<< Updated upstream
 Begin here (or replace this with any static code already written).
 </body>
 </html>
+=======
+<center>
+<h1>Random n-Digit Number Generator</h1>
+<p style="font-size:5vw;" id="numberHolder"> {{randomNumber}} <br> </p>
+<p> Enter the number of digits you want to have randomized.</p>
+Digits: <input type="text" id="numDigits" value="6">
+
+<button type="button" onclick="reroll()">Reroll</button>
+</center>
+</body>
+</html>
+
+<script>
+	function reroll() {
+		console.log("Hello world");
+		// Create new number in javascript
+		var n = parseInt(document.getElementById("numDigits").value)
+		var value = (Math.floor(Math.random() * (10**(n+1) - (10**n - 1)) + 10**n)).toString()
+		value = value.substring(1)
+		// Update database with the new number
+  		document.getElementById("numberHolder").innerHTML = value;
+	}
+</script>
+
+>>>>>>> Stashed changes
