@@ -1,3 +1,3 @@
 import random
 
-print(random.randint(0,999999))
+print(str(random.randint(0,9999999))[1::])
