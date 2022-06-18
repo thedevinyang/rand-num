@@ -7,11 +7,10 @@
 </head>
 
 
-
 <center>
 <h1>Random n-Digit Number Generator</h1>
 <p style="font-size:5vw;" id="numberHolder"> {{randomNumber}} <br> </p>
-<p> Enter the number of digits you want to have randomized.</p>
+<p> Enter the number of digits you want to have randomized. This value can be from 1 to 15.</p>
 Digits: <input type="text" id="numDigits" value="6">
 
 <button type="button" onclick="reroll()">Reroll</button>
@@ -19,18 +18,4 @@ Digits: <input type="text" id="numDigits" value="6">
 </body>
 </html>
 
-<script>
-	// form validation; only numbers in the text box
-	// fix python 6 digits
-	//learn nodemon commands
-	function reroll() {
-		console.log("Hello world");
-		// Create new number in javascript
-		var n = parseInt(document.getElementById("numDigits").value)
-		var value = (Math.floor(Math.random() * (10**(n+1) - (10**n - 1)) + 10**n)).toString()
-		value = value.substring(1)
-		// Update database with the new number
-  		document.getElementById("numberHolder").innerHTML = value;
-	}
-</script>
-
+<script type="text/javascript" src="js/randnum_gen.js"></script>

@@ -6,18 +6,22 @@ const PythonShell = require('python-shell').PythonShell;
 
 
 exports.view = function(req, res){
-  PythonShell.run('pyscripts/my_script.py', null, function (err, results) {
+  var data = {
+    n : 6
+  }
+
+  var options = {
+    args: [data["n"]]
+  }
+  PythonShell.run('pyscripts/my_script.py', options, function (err, pyscript_output) {
     if (err) 
       throw err;
     // Results is an array consisting of messages collected during execution
-    console.log('results: %j', results);
-<<<<<<< Updated upstream
-=======
-    res.render('index', {randomNumber:results});
->>>>>>> Stashed changes
+    console.log('results: %j', pyscript_output);
+    data["randomNumber"] = pyscript_output
+    res.render('index', data);
   });
   
-  res.render('index');
 };
 
 exports.viewAboutMe = function(req, res) {
